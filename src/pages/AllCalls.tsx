@@ -13,8 +13,8 @@ const allCalls: CallItemData[] = [
   {
     id: "call-001",
     customer: {
-      name: "John Smith",
-      phone: "+1 (555) 123-4567",
+      name: "Amira Mahmoud",
+      phone: "+20 (102) 123-4567",
     },
     date: "May 10, 2025",
     time: "10:30 AM",
@@ -25,8 +25,8 @@ const allCalls: CallItemData[] = [
   {
     id: "call-002",
     customer: {
-      name: "Sarah Johnson",
-      phone: "+1 (555) 987-6543",
+      name: "Omar Hassan",
+      phone: "+20 (112) 987-6543",
     },
     date: "May 9, 2025",
     time: "3:15 PM",
@@ -37,8 +37,8 @@ const allCalls: CallItemData[] = [
   {
     id: "call-003",
     customer: {
-      name: "Michael Williams",
-      phone: "+1 (555) 456-7890",
+      name: "Layla Ibrahim",
+      phone: "+20 (100) 456-7890",
     },
     date: "May 9, 2025",
     time: "11:45 AM",
@@ -49,8 +49,8 @@ const allCalls: CallItemData[] = [
   {
     id: "call-004",
     customer: {
-      name: "Jennifer Brown",
-      phone: "+1 (555) 234-5678",
+      name: "Mustafa Ali",
+      phone: "+20 (111) 234-5678",
     },
     date: "May 8, 2025",
     time: "2:00 PM",
@@ -61,8 +61,8 @@ const allCalls: CallItemData[] = [
   {
     id: "call-005",
     customer: {
-      name: "Robert Davis",
-      phone: "+1 (555) 345-6789",
+      name: "Nour El-Din",
+      phone: "+20 (101) 345-6789",
     },
     date: "May 8, 2025",
     time: "9:20 AM",
@@ -73,8 +73,8 @@ const allCalls: CallItemData[] = [
   {
     id: "call-006",
     customer: {
-      name: "Emily Wilson",
-      phone: "+1 (555) 567-8901",
+      name: "Fatima Mohammed",
+      phone: "+20 (106) 567-8901",
     },
     date: "May 7, 2025",
     time: "4:45 PM",
@@ -85,8 +85,8 @@ const allCalls: CallItemData[] = [
   {
     id: "call-007",
     customer: {
-      name: "David Martinez",
-      phone: "+1 (555) 678-9012",
+      name: "Ahmed Khaled",
+      phone: "+20 (109) 678-9012",
     },
     date: "May 7, 2025",
     time: "11:10 AM",
@@ -97,8 +97,8 @@ const allCalls: CallItemData[] = [
   {
     id: "call-008",
     customer: {
-      name: "Lisa Anderson",
-      phone: "+1 (555) 789-0123",
+      name: "Yasmin Adel",
+      phone: "+20 (115) 789-0123",
     },
     date: "May 6, 2025",
     time: "2:30 PM",

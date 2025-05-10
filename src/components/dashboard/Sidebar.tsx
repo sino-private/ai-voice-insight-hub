@@ -52,8 +52,8 @@ const Sidebar = ({ className }: SidebarProps) => {
     <div className={cn("w-64 border-r bg-white h-screen flex flex-col", className)}>
       <div className="p-4 border-b">
         <h2 className="font-bold text-xl flex items-center">
-          <span className="text-brand-blue">AI</span>
-          <span className="ml-1">Converse</span>
+          <span className="text-brand-blue">Hello</span>
+          <span className="ml-1">Sonar</span>
         </h2>
       </div>
       
@@ -78,11 +78,11 @@ const Sidebar = ({ className }: SidebarProps) => {
       <div className="p-4 border-t mt-auto">
         <div className="flex items-center">
           <div className="h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center text-brand-blue font-bold">
-            A
+            Y
           </div>
           <div className="ml-3">
-            <p className="text-sm font-medium">Admin User</p>
-            <p className="text-xs text-gray-500">admin@aiconverse.com</p>
+            <p className="text-sm font-medium">Youssef Ahmed</p>
+            <p className="text-xs text-gray-500">youssef@hellosonar.com</p>
           </div>
         </div>
       </div>

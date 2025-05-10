@@ -17,10 +17,10 @@ const CallDetails = ({ callId }: CallDetailsProps) => {
   const callData = {
     id: "call-001",
     customer: {
-      name: "John Smith",
-      phone: "+1 (555) 123-4567",
-      company: "Acme Corp",
-      email: "john@acmecorp.com"
+      name: "Amira Mahmoud",
+      phone: "+20 (102) 123-4567",
+      company: "Cairo Electronics",
+      email: "amira@cairoelectronics.com"
     },
     date: "May 10, 2025",
     time: "10:30 AM",
@@ -28,29 +28,29 @@ const CallDetails = ({ callId }: CallDetailsProps) => {
     status: "completed",
     topic: "Product inquiry about enterprise plan",
     transcript: [
-      { speaker: "AI", text: "Hello, thank you for calling AI Converse. How can I assist you today?", time: "0:00" },
+      { speaker: "AI", text: "Hello, thank you for calling HelloSonar. How can I assist you today?", time: "0:00" },
       { speaker: "Customer", text: "Hi, I'm interested in learning more about your enterprise plan.", time: "0:05" },
       { speaker: "AI", text: "I'd be happy to tell you about our enterprise plan. It includes unlimited calls, priority support, and custom AI training.", time: "0:12" },
       { speaker: "Customer", text: "That sounds good. What about pricing?", time: "0:24" },
       { speaker: "AI", text: "Our enterprise plan starts at $999 per month and scales based on usage. Would you like me to have one of our account executives reach out to discuss your specific needs?", time: "0:30" },
-      { speaker: "Customer", text: "Yes, that would be helpful. My email is john@acmecorp.com.", time: "0:45" },
+      { speaker: "Customer", text: "Yes, that would be helpful. My email is amira@cairoelectronics.com.", time: "0:45" },
       { speaker: "AI", text: "Perfect! I've noted your email. An account executive will reach out within the next 24 hours. Is there anything else I can help you with today?", time: "0:52" },
       { speaker: "Customer", text: "No, that's all for now. Thank you.", time: "1:05" },
-      { speaker: "AI", text: "Thank you for your interest in AI Converse. Have a great day!", time: "1:10" }
+      { speaker: "AI", text: "Thank you for your interest in HelloSonar. Have a great day!", time: "1:10" }
     ],
-    summary: "John Smith from Acme Corp inquired about the enterprise plan pricing. He requested more information and provided his email (john@acmecorp.com) for follow-up. He's interested in learning about the unlimited calls, priority support, and custom AI training features. An account executive should contact him within 24 hours.",
+    summary: "Amira Mahmoud from Cairo Electronics inquired about the enterprise plan pricing. She requested more information and provided her email (amira@cairoelectronics.com) for follow-up. She's interested in learning about the unlimited calls, priority support, and custom AI training features. An account executive should contact her within 24 hours.",
     report: {
       sentiment: "Positive",
       intent: "Information gathering",
       nextActions: [
         "Account executive to follow up within 24 hours",
-        "Prepare enterprise plan pricing details specific to Acme Corp's size",
+        "Prepare enterprise plan pricing details specific to Cairo Electronics' size",
         "Add customer to CRM for tracking"
       ],
       keyInsights: [
         "Customer is in research phase",
         "Price sensitivity was indicated",
-        "Customer represents Acme Corp, a potential enterprise client",
+        "Customer represents Cairo Electronics, a potential enterprise client",
         "Customer preferred email contact over immediate phone call"
       ],
       recommendedFollowup: "Send a personalized email with enterprise plan details before the account executive call to give the customer time to review."

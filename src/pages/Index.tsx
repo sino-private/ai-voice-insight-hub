@@ -12,8 +12,8 @@ const recentCalls: CallItemData[] = [
   {
     id: "call-001",
     customer: {
-      name: "John Smith",
-      phone: "+1 (555) 123-4567",
+      name: "Amira Mahmoud",
+      phone: "+20 (102) 123-4567",
     },
     date: "May 10, 2025",
     time: "10:30 AM",
@@ -24,8 +24,8 @@ const recentCalls: CallItemData[] = [
   {
     id: "call-002",
     customer: {
-      name: "Sarah Johnson",
-      phone: "+1 (555) 987-6543",
+      name: "Omar Hassan",
+      phone: "+20 (112) 987-6543",
     },
     date: "May 9, 2025",
     time: "3:15 PM",
@@ -36,8 +36,8 @@ const recentCalls: CallItemData[] = [
   {
     id: "call-003",
     customer: {
-      name: "Michael Williams",
-      phone: "+1 (555) 456-7890",
+      name: "Layla Ibrahim",
+      phone: "+20 (100) 456-7890",
     },
     date: "May 9, 2025",
     time: "11:45 AM",
@@ -48,8 +48,8 @@ const recentCalls: CallItemData[] = [
   {
     id: "call-004",
     customer: {
-      name: "Jennifer Brown",
-      phone: "+1 (555) 234-5678",
+      name: "Mustafa Ali",
+      phone: "+20 (111) 234-5678",
     },
     date: "May 8, 2025",
     time: "2:00 PM",
@@ -72,7 +72,7 @@ const Index = () => {
   return (
     <DashboardLayout>
       <div className="mb-8">
-        <h1 className="text-2xl font-bold mb-2">Welcome back, Admin</h1>
+        <h1 className="text-2xl font-bold mb-2">Welcome back, Youssef</h1>
         <p className="text-gray-500">Here's what's happening with your AI conversations</p>
       </div>
       
@@ -195,7 +195,7 @@ const Index = () => {
             </div>
             <div>
               <p className="text-sm">
-                <span className="font-medium">John Smith</span> from Acme Corp had a call about enterprise pricing
+                <span className="font-medium">Amira Mahmoud</span> from Cairo Electronics had a call about enterprise pricing
               </p>
               <p className="text-xs text-gray-500 mt-1">30 minutes ago</p>
             </div>
@@ -207,7 +207,7 @@ const Index = () => {
             </div>
             <div>
               <p className="text-sm">
-                <span className="font-medium">Sarah Johnson</span> call recording was downloaded
+                <span className="font-medium">Omar Hassan</span> call recording was downloaded
               </p>
               <p className="text-xs text-gray-500 mt-1">2 hours ago</p>
             </div>
@@ -219,7 +219,7 @@ const Index = () => {
             </div>
             <div>
               <p className="text-sm">
-                <span className="font-medium">Michael Williams</span> call report was generated
+                <span className="font-medium">Layla Ibrahim</span> call report was generated
               </p>
               <p className="text-xs text-gray-500 mt-1">3 hours ago</p>
             </div>
@@ -231,7 +231,7 @@ const Index = () => {
             </div>
             <div>
               <p className="text-sm">
-                <span className="font-medium">Jennifer Brown</span> was added as a new customer
+                <span className="font-medium">Mustafa Ali</span> was added as a new customer
               </p>
               <p className="text-xs text-gray-500 mt-1">5 hours ago</p>
             </div>
