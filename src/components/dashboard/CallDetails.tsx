@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useToast } from "@/hooks/use-toast";
-import { ArrowLeft, Download, FileText, Play, Video } from "lucide-react";
+import { ArrowLeft, Download, FileText, Play, FileDown } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 interface CallDetailsProps {
@@ -60,6 +60,13 @@ const CallDetails = ({ callId }: CallDetailsProps) => {
   const handleDownload = () => {
     toast({
       title: "Download started",
+      description: "Your call transcript is being downloaded",
+    });
+  };
+
+  const handleDownloadRecording = () => {
+    toast({
+      title: "Download started",
       description: "Your call recording is being downloaded",
     });
   };
@@ -92,9 +99,13 @@ const CallDetails = ({ callId }: CallDetailsProps) => {
               </div>
 
               <div className="flex space-x-2">
-                <Button variant="outline" size="sm" onClick={handleDownload}>
+                <Button variant="outline" size="sm" onClick={handleDownloadRecording}>
                   <Download className="h-4 w-4 mr-1" />
-                  Download
+                  Recording
+                </Button>
+                <Button variant="outline" size="sm" onClick={handleDownload}>
+                  <FileDown className="h-4 w-4 mr-1" />
+                  Transcript
                 </Button>
                 <Button size="sm" className="bg-brand-blue hover:bg-brand-blue/90">
                   <Play className="h-4 w-4 mr-1" />
@@ -103,32 +114,11 @@ const CallDetails = ({ callId }: CallDetailsProps) => {
               </div>
             </div>
 
-            <Tabs defaultValue="transcript">
+            <Tabs defaultValue="summary">
               <TabsList className="mb-4">
-                <TabsTrigger value="transcript">Transcript</TabsTrigger>
                 <TabsTrigger value="summary">Summary</TabsTrigger>
                 <TabsTrigger value="report">AI Report</TabsTrigger>
               </TabsList>
-              
-              <TabsContent value="transcript" className="space-y-4">
-                {callData.transcript.map((item, index) => (
-                  <div key={index} className={`flex ${item.speaker === 'AI' ? 'justify-start' : 'justify-end'}`}>
-                    <div 
-                      className={`max-w-[80%] rounded-lg p-3 ${
-                        item.speaker === 'AI' 
-                          ? 'bg-gray-100 text-gray-800'
-                          : 'bg-brand-blue text-white'
-                      }`}
-                    >
-                      <div className="flex justify-between text-xs mb-1">
-                        <span className="font-medium">{item.speaker}</span>
-                        <span>{item.time}</span>
-                      </div>
-                      <p>{item.text}</p>
-                    </div>
-                  </div>
-                ))}
-              </TabsContent>
               
               <TabsContent value="summary">
                 <div className="bg-gray-50 p-4 rounded-md border">
