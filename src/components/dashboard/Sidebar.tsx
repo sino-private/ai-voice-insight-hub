@@ -2,49 +2,46 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Home, Phone, BarChart3, Settings, Users, FileText } from "lucide-react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 interface SidebarProps {
   className?: string;
 }
 
 const Sidebar = ({ className }: SidebarProps) => {
+  const location = useLocation();
+  const currentPath = location.pathname;
+  
   const navItems = [
     { 
       icon: Home, 
       label: "Dashboard", 
-      href: "/", 
-      active: true 
+      href: "/" 
     },
     { 
       icon: Phone, 
       label: "Calls", 
-      href: "/calls", 
-      active: false 
+      href: "/calls" 
     },
     { 
       icon: FileText, 
       label: "Reports", 
-      href: "/reports", 
-      active: false 
+      href: "/reports" 
     },
     { 
       icon: BarChart3, 
       label: "Analytics", 
-      href: "/analytics", 
-      active: false 
+      href: "/analytics" 
     },
     { 
       icon: Users, 
       label: "Team", 
-      href: "/team", 
-      active: false 
+      href: "/team" 
     },
     { 
       icon: Settings, 
       label: "Settings", 
-      href: "/settings", 
-      active: false 
+      href: "/settings" 
     },
   ];
 
@@ -64,7 +61,7 @@ const Sidebar = ({ className }: SidebarProps) => {
             to={item.href} 
             className={({ isActive }) => cn(
               "flex items-center space-x-3 px-3 py-2 rounded-md text-sm transition-colors",
-              isActive || item.active 
+              isActive 
                 ? "bg-brand-blue text-white" 
                 : "hover:bg-gray-100 text-gray-700"
             )}
