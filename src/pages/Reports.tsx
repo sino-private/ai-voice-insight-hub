@@ -4,42 +4,36 @@ import DashboardLayout from "@/components/dashboard/DashboardLayout";
 import StatsCard from "@/components/dashboard/StatsCard";
 import { FileText, FileSearch, FilePieChart, Download } from "lucide-react";
 import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from "@/components/ui/table";
-import { Button } from "@/components/ui/button";
 
 const reportsData = [
   {
     id: 1,
     name: "Monthly Call Summary",
     date: "2025-05-01",
-    type: "Summary",
     status: "Completed"
   },
   {
     id: 2,
     name: "Q2 Call Analytics",
     date: "2025-04-15",
-    type: "Analytics",
     status: "Completed"
   },
   {
     id: 3,
     name: "Sales Team Performance",
     date: "2025-05-05",
-    type: "Performance",
     status: "Pending"
   },
   {
     id: 4,
     name: "Customer Satisfaction Survey",
     date: "2025-05-10",
-    type: "Survey",
     status: "Processing"
   },
   {
     id: 5,
     name: "Agent Quality Assessment",
     date: "2025-04-30",
-    type: "Assessment",
     status: "Completed"
   }
 ];
@@ -48,8 +42,7 @@ const Reports = () => {
   const [searchTerm, setSearchTerm] = useState("");
   
   const filteredReports = reportsData.filter(
-    report => report.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
-              report.type.toLowerCase().includes(searchTerm.toLowerCase())
+    report => report.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
   
   return (
@@ -84,18 +77,15 @@ const Reports = () => {
           <div className="p-4 border-b">
             <div className="flex items-center justify-between">
               <h2 className="font-semibold">Available Reports</h2>
-              <div className="flex space-x-2">
-                <div className="relative">
-                  <input
-                    type="text"
-                    placeholder="Search reports..."
-                    className="border rounded-md px-3 py-2 text-sm w-64 focus:outline-none focus:ring-2 focus:ring-brand-blue"
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                  />
-                  <FileSearch className="h-4 w-4 absolute right-3 top-2.5 text-gray-400" />
-                </div>
-                <Button>Generate Report</Button>
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Search reports..."
+                  className="border rounded-md px-3 py-2 text-sm w-64 focus:outline-none focus:ring-2 focus:ring-brand-blue"
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                />
+                <FileSearch className="h-4 w-4 absolute right-3 top-2.5 text-gray-400" />
               </div>
             </div>
           </div>
@@ -105,7 +95,6 @@ const Reports = () => {
               <TableRow>
                 <TableHead>Report Name</TableHead>
                 <TableHead>Date</TableHead>
-                <TableHead>Type</TableHead>
                 <TableHead>Status</TableHead>
                 <TableHead className="text-right">Actions</TableHead>
               </TableRow>
@@ -116,7 +105,6 @@ const Reports = () => {
                   <TableRow key={report.id}>
                     <TableCell className="font-medium">{report.name}</TableCell>
                     <TableCell>{report.date}</TableCell>
-                    <TableCell>{report.type}</TableCell>
                     <TableCell>
                       <span className={`px-2 py-1 rounded-full text-xs ${
                         report.status === "Completed" 
@@ -129,15 +117,17 @@ const Reports = () => {
                       </span>
                     </TableCell>
                     <TableCell className="text-right">
-                      <Button variant="ghost" size="sm">
-                        <Download className="h-4 w-4 mr-1" /> Download
-                      </Button>
+                      <button 
+                        className="inline-flex items-center justify-center gap-2 text-sm font-medium text-gray-700 hover:text-gray-900"
+                      >
+                        <Download className="h-4 w-4" /> Download
+                      </button>
                     </TableCell>
                   </TableRow>
                 ))
               ) : (
                 <TableRow>
-                  <TableCell colSpan={5} className="text-center py-4">
+                  <TableCell colSpan={4} className="text-center py-4">
                     No reports found matching your search.
                   </TableCell>
                 </TableRow>
