@@ -78,7 +78,7 @@ const Sidebar = ({ className }: SidebarProps) => {
             Y
           </div>
           <div className="ml-3">
-            <p className="text-sm font-medium">Youssef Ahmed</p>
+            <p className="text-sm font-medium">Youssef Zikry</p>
             <p className="text-xs text-gray-500">youssef@hellosonar.com</p>
           </div>
         </div>
