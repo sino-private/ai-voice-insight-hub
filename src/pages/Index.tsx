@@ -1,4 +1,3 @@
-
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
 import StatsCard from "@/components/dashboard/StatsCard";
 import CallItem, { CallItemData } from "@/components/dashboard/CallItem";
@@ -12,14 +11,14 @@ const recentCalls: CallItemData[] = [
   {
     id: "call-001",
     customer: {
-      name: "Amira Mahmoud",
+      name: "Ahmed Mahmoud",
       phone: "+20 (102) 123-4567",
     },
     date: "May 10, 2025",
     time: "10:30 AM",
     duration: "4:25",
     status: "completed",
-    topic: "Product inquiry about enterprise plan"
+    topic: "Inquiry about Margin app"
   },
   {
     id: "call-002",
