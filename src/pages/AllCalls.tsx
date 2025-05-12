@@ -1,10 +1,16 @@
-
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
 import CallItem, { CallItemData } from "@/components/dashboard/CallItem";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { ArrowDown, ArrowUp, Calendar, Search } from "lucide-react";
 import { useState } from "react";
 
@@ -13,14 +19,14 @@ const allCalls: CallItemData[] = [
   {
     id: "call-001",
     customer: {
-      name: "Amira Mahmoud",
+      name: "Ahmed Mahmoud",
       phone: "+20 (102) 123-4567",
     },
     date: "May 10, 2025",
     time: "10:30 AM",
     duration: "4:25",
     status: "completed",
-    topic: "Product inquiry about enterprise plan"
+    topic: "Product inquiry about enterprise plan",
   },
   {
     id: "call-002",
@@ -32,7 +38,7 @@ const allCalls: CallItemData[] = [
     time: "3:15 PM",
     duration: "2:10",
     status: "completed",
-    topic: "Customer support issue with billing"
+    topic: "Customer support issue with billing",
   },
   {
     id: "call-003",
@@ -44,7 +50,7 @@ const allCalls: CallItemData[] = [
     time: "11:45 AM",
     duration: "5:32",
     status: "completed",
-    topic: "Technical support for integration"
+    topic: "Technical support for integration",
   },
   {
     id: "call-004",
@@ -56,7 +62,7 @@ const allCalls: CallItemData[] = [
     time: "2:00 PM",
     duration: "3:45",
     status: "completed",
-    topic: "Product demo request"
+    topic: "Product demo request",
   },
   {
     id: "call-005",
@@ -68,7 +74,7 @@ const allCalls: CallItemData[] = [
     time: "9:20 AM",
     duration: "6:15",
     status: "completed",
-    topic: "Sales inquiry for small business"
+    topic: "Sales inquiry for small business",
   },
   {
     id: "call-006",
@@ -80,7 +86,7 @@ const allCalls: CallItemData[] = [
     time: "4:45 PM",
     duration: "1:55",
     status: "completed",
-    topic: "Account setup assistance"
+    topic: "Account setup assistance",
   },
   {
     id: "call-007",
@@ -92,7 +98,7 @@ const allCalls: CallItemData[] = [
     time: "11:10 AM",
     duration: "3:20",
     status: "completed",
-    topic: "Feature request discussion"
+    topic: "Feature request discussion",
   },
   {
     id: "call-008",
@@ -104,42 +110,46 @@ const allCalls: CallItemData[] = [
     time: "2:30 PM",
     duration: "4:05",
     status: "completed",
-    topic: "Integration with CRM system"
-  }
+    topic: "Integration with CRM system",
+  },
 ];
 
 const AllCalls = () => {
   const [sort, setSort] = useState("newest");
   const [filter, setFilter] = useState("all");
   const [searchTerm, setSearchTerm] = useState("");
-  
+
   // Simple filtering and sorting logic
-  const filteredCalls = allCalls.filter(call => {
+  const filteredCalls = allCalls.filter((call) => {
     if (filter === "all") return true;
     return call.status === filter;
   });
-  
+
   const sortedCalls = [...filteredCalls].sort((a, b) => {
     const dateA = new Date(`${a.date} ${a.time}`).getTime();
     const dateB = new Date(`${b.date} ${b.time}`).getTime();
-    
+
     return sort === "newest" ? dateB - dateA : dateA - dateB;
   });
-  
+
   return (
     <DashboardLayout>
       <div className="mb-6">
         <h1 className="text-2xl font-bold">All Calls</h1>
-        <p className="text-gray-500">View and manage all conversation records</p>
+        <p className="text-gray-500">
+          View and manage all conversation records
+        </p>
       </div>
-      
+
       <Card className="p-6 mb-6">
         <div className="flex flex-col md:flex-row gap-4 items-end">
           <div className="flex-1">
-            <label className="block text-sm font-medium text-gray-700 mb-1">Search</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Search
+            </label>
             <div className="relative">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
-              <Input 
+              <Input
                 type="text"
                 placeholder="Search by name or topic..."
                 className="pl-10"
@@ -148,9 +158,11 @@ const AllCalls = () => {
               />
             </div>
           </div>
-          
+
           <div className="w-full md:w-40">
-            <label className="block text-sm font-medium text-gray-700 mb-1">Status</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Status
+            </label>
             <Select value={filter} onValueChange={setFilter}>
               <SelectTrigger>
                 <SelectValue placeholder="Filter by status" />
@@ -165,9 +177,11 @@ const AllCalls = () => {
               </SelectContent>
             </Select>
           </div>
-          
+
           <div className="w-full md:w-40">
-            <label className="block text-sm font-medium text-gray-700 mb-1">Date Range</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Date Range
+            </label>
             <Button variant="outline" className="w-full justify-between">
               <div className="flex items-center">
                 <Calendar className="h-4 w-4 mr-2" />
@@ -176,9 +190,11 @@ const AllCalls = () => {
               <ArrowDown className="h-4 w-4" />
             </Button>
           </div>
-          
+
           <div className="w-full md:w-40">
-            <label className="block text-sm font-medium text-gray-700 mb-1">Sort</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Sort
+            </label>
             <Select value={sort} onValueChange={setSort}>
               <SelectTrigger>
                 <SelectValue placeholder="Sort by" />
@@ -203,14 +219,10 @@ const AllCalls = () => {
           </div>
         </div>
       </Card>
-      
+
       <div className="space-y-4">
         {sortedCalls.map((call) => (
-          <CallItem 
-            key={call.id} 
-            call={call}
-            active={call.id === "call-001"} 
-          />
+          <CallItem key={call.id} call={call} active={call.id === "call-001"} />
         ))}
       </div>
     </DashboardLayout>
