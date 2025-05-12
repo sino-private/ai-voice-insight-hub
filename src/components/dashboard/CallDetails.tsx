@@ -40,7 +40,7 @@ const CallDetails = ({ callId }: CallDetailsProps) => {
       { speaker: "Customer", text: "No, that's all I needed for now. Thank you for explaining.", time: "1:15" },
       { speaker: "AI", text: "You're welcome! Feel free to call back if you have any more questions about Margin. Have a great day!", time: "1:20" }
     ],
-    summary: "Ahmed Mahmoud called to inquire about what Margin is. I explained that Margin is a smart financial app designed to help users track spending, stay on budget, and gain insights into financial habits. The customer asked about adding new expenses and viewing the dashboard. I provided step-by-step guidance on both processes, explaining how to use the '+' button for expenses and how to access the dashboard and reports for spending insights.",
+    summary: "Ahmed Mahmoud called to inquire about what Margin is. The agent explained that Margin is a smart financial app designed to help users track spending, stay on budget, and gain insights into financial habits. The customer asked about adding new expenses and viewing the dashboard. The agent provided step-by-step guidance on both processes, explaining how to use the '+' button for expenses and how to access the dashboard and reports for spending insights.",
     report: {
       sentiment: "Positive",
       intent: "Information gathering",

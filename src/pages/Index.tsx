@@ -11,7 +11,7 @@ const recentCalls: CallItemData[] = [
   {
     id: "call-001",
     customer: {
-      name: "Ahmed Mahmoud",
+      name: "Ahmed Mahmoud12",
       phone: "+20 (102) 123-4567",
     },
     date: "May 10, 2025",
@@ -194,7 +194,7 @@ const Index = () => {
             </div>
             <div>
               <p className="text-sm">
-                <span className="font-medium">Amira Mahmoud</span> from Cairo Electronics had a call about enterprise pricing
+                <span className="font-medium">Ahmed Mahmoud12</span> from Cairo Electronics had a call about enterprise pricing
               </p>
               <p className="text-xs text-gray-500 mt-1">30 minutes ago</p>
             </div>
