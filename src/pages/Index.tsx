@@ -207,7 +207,7 @@ const Index = () => {
             <div>
               <p className="text-sm">
                 <span className="font-medium">Ahmed Mahmoud</span> from Cairo
-                Electronics had a call about enterprise pricing
+                Electronics had a call the Margin app
               </p>
               <p className="text-xs text-gray-500 mt-1">30 minutes ago</p>
             </div>

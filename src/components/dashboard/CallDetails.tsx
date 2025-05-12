@@ -278,10 +278,6 @@ const CallDetails = ({ callId }: CallDetailsProps) => {
                   <p className="font-medium">{callData.duration}</p>
                 </div>
                 <div className="flex justify-between">
-                  <p className="text-sm text-gray-500">AI Response Time</p>
-                  <p className="font-medium">0.8s avg</p>
-                </div>
-                <div className="flex justify-between">
                   <p className="text-sm text-gray-500">Customer Talk Time</p>
                   <p className="font-medium">2:15</p>
                 </div>
