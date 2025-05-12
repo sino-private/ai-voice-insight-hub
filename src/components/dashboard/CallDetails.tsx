@@ -17,43 +17,45 @@ const CallDetails = ({ callId }: CallDetailsProps) => {
   const callData = {
     id: "call-001",
     customer: {
-      name: "Amira Mahmoud",
+      name: "Ahmed Mahmoud",
       phone: "+20 (102) 123-4567",
-      company: "Cairo Electronics",
-      email: "amira@cairoelectronics.com"
+      company: "Cairo Financial",
+      email: "ahmed@cairofinancial.com"
     },
     date: "May 10, 2025",
     time: "10:30 AM",
     duration: "4:25",
     status: "completed",
-    topic: "Product inquiry about enterprise plan",
+    topic: "Inquiry about Margin app",
     transcript: [
-      { speaker: "AI", text: "Hello, thank you for calling HelloSonar. How can I assist you today?", time: "0:00" },
-      { speaker: "Customer", text: "Hi, I'm interested in learning more about your enterprise plan.", time: "0:05" },
-      { speaker: "AI", text: "I'd be happy to tell you about our enterprise plan. It includes unlimited calls, priority support, and custom AI training.", time: "0:12" },
-      { speaker: "Customer", text: "That sounds good. What about pricing?", time: "0:24" },
-      { speaker: "AI", text: "Our enterprise plan starts at $999 per month and scales based on usage. Would you like me to have one of our account executives reach out to discuss your specific needs?", time: "0:30" },
-      { speaker: "Customer", text: "Yes, that would be helpful. My email is amira@cairoelectronics.com.", time: "0:45" },
-      { speaker: "AI", text: "Perfect! I've noted your email. An account executive will reach out within the next 24 hours. Is there anything else I can help you with today?", time: "0:52" },
-      { speaker: "Customer", text: "No, that's all for now. Thank you.", time: "1:05" },
-      { speaker: "AI", text: "Thank you for your interest in HelloSonar. Have a great day!", time: "1:10" }
+      { speaker: "AI", text: "Hello, thank you for calling Sonar. How can I assist you today?", time: "0:00" },
+      { speaker: "Customer", text: "Hi, I was wondering if you could tell me what Margin is? I've heard about it but I'm not sure what it does.", time: "0:05" },
+      { speaker: "AI", text: "I'd be happy to explain. Margin is a smart app designed to help users track their spending, stay on budget, and get clear insights into their financial habits. It connects securely to your bank accounts and automatically categorizes your transactions.", time: "0:12" },
+      { speaker: "Customer", text: "That sounds useful. How do I add a new expense in the app?", time: "0:24" },
+      { speaker: "AI", text: "Adding a new expense in Margin is very simple. First, open the app and tap on the '+' button at the bottom of the screen. Then, enter the amount, select a category, and add any notes if needed. You can also take a photo of your receipt for your records. Finally, tap 'Save' and your expense will be added to your budget tracker.", time: "0:30" },
+      { speaker: "Customer", text: "Great, and how do I view my dashboard to see my spending?", time: "0:45" },
+      { speaker: "AI", text: "To view your dashboard, just open the app and you'll see your main dashboard on the home screen. It shows your monthly overview with spending by category, upcoming bills, and savings goals. For more detailed insights, tap on the 'Reports' tab at the bottom of the screen, where you can view spending trends and compare your expenses across different time periods.", time: "0:52" },
+      { speaker: "Customer", text: "That's very helpful, thank you.", time: "1:05" },
+      { speaker: "AI", text: "You're welcome! Is there anything else I can help you with regarding Margin or any other financial tools?", time: "1:10" },
+      { speaker: "Customer", text: "No, that's all I needed for now. Thank you for explaining.", time: "1:15" },
+      { speaker: "AI", text: "You're welcome! Feel free to call back if you have any more questions about Margin. Have a great day!", time: "1:20" }
     ],
-    summary: "Amira Mahmoud from Cairo Electronics inquired about the enterprise plan pricing. She requested more information and provided her email (amira@cairoelectronics.com) for follow-up. She's interested in learning about the unlimited calls, priority support, and custom AI training features. An account executive should contact her within 24 hours.",
+    summary: "Ahmed Mahmoud called to inquire about what Margin is. I explained that Margin is a smart financial app designed to help users track spending, stay on budget, and gain insights into financial habits. The customer asked about adding new expenses and viewing the dashboard. I provided step-by-step guidance on both processes, explaining how to use the '+' button for expenses and how to access the dashboard and reports for spending insights.",
     report: {
       sentiment: "Positive",
       intent: "Information gathering",
       nextActions: [
-        "Account executive to follow up within 24 hours",
-        "Prepare enterprise plan pricing details specific to Cairo Electronics' size",
-        "Add customer to CRM for tracking"
+        "Send follow-up email with Margin quick start guide",
+        "Check in after one week to see if customer has started using Margin",
+        "Offer personal onboarding session if needed"
       ],
       keyInsights: [
-        "Customer is in research phase",
-        "Price sensitivity was indicated",
-        "Customer represents Cairo Electronics, a potential enterprise client",
-        "Customer preferred email contact over immediate phone call"
+        "Customer is in research phase for financial tools",
+        "Customer values ease of use for daily tasks",
+        "Customer is interested in tracking and visualization features",
+        "Customer may need additional support during onboarding"
       ],
-      recommendedFollowup: "Send a personalized email with enterprise plan details before the account executive call to give the customer time to review."
+      recommendedFollowup: "Send a follow-up email with links to video tutorials for adding expenses and using the dashboard in Margin, along with an invitation to a free personal onboarding session if they'd like more guidance."
     }
   };
 

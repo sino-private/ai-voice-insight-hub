@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
 import StatsCard from "@/components/dashboard/StatsCard";
@@ -10,8 +9,8 @@ const callReportsData = [
   {
     id: 1,
     callId: "call-001",
-    caller: "Amira Mahmoud",
-    company: "Cairo Electronics",
+    caller: "Ahmed Mahmoud",
+    company: "Cario Financial",
     date: "2025-05-01",
     duration: "4:25",
     status: "Completed"
@@ -28,7 +27,7 @@ const callReportsData = [
   {
     id: 3,
     callId: "call-003",
-    caller: "Laila Hassan",
+    caller: "Hassan Ibrahim",
     company: "Global Media",
     date: "2025-05-05",
     duration: "6:48",
@@ -46,7 +45,7 @@ const callReportsData = [
   {
     id: 5,
     callId: "call-005",
-    caller: "Nadia Selim",
+    caller: "Samir Selim",
     company: "Pharma Solutions",
     date: "2025-04-30",
     duration: "5:17",
@@ -79,7 +78,7 @@ const Reports = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <StatsCard 
             title="Total Call Reports"
-            value={callReportsData.length}
+            value="5"
             icon={<FileText />}
           />
           <StatsCard 
