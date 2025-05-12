@@ -119,55 +119,61 @@ const Analytics = () => {
             </TabsList>
           </div>
           
-          <div className="p-4">
-            <TabsContent value="call-volume">
+          <div className="p-6">
+            <TabsContent value="call-volume" className="mt-0">
               <h3 className="font-semibold mb-4">Monthly Call Volume</h3>
-              <div className="h-80">
-                <ChartContainer config={chartConfig}>
-                  <BarChart data={callVolumeData}>
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="name" />
-                    <YAxis />
-                    <ChartTooltip content={<ChartTooltipContent />} />
-                    <Bar dataKey="calls" name="Calls" fill="#3b82f6" radius={[4, 4, 0, 0]} />
-                  </BarChart>
-                </ChartContainer>
+              <div className="h-96">
+                <ResponsiveContainer width="100%" height="100%">
+                  <ChartContainer config={chartConfig}>
+                    <BarChart data={callVolumeData} margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>
+                      <CartesianGrid strokeDasharray="3 3" />
+                      <XAxis dataKey="name" />
+                      <YAxis />
+                      <ChartTooltip content={<ChartTooltipContent />} />
+                      <Bar dataKey="calls" name="Calls" fill="#3b82f6" radius={[4, 4, 0, 0]} />
+                    </BarChart>
+                  </ChartContainer>
+                </ResponsiveContainer>
               </div>
             </TabsContent>
             
-            <TabsContent value="call-duration">
+            <TabsContent value="call-duration" className="mt-0">
               <h3 className="font-semibold mb-4">Average Call Duration (Minutes)</h3>
-              <div className="h-80">
-                <ChartContainer config={chartConfig}>
-                  <LineChart data={callDurationData}>
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="name" />
-                    <YAxis />
-                    <ChartTooltip content={<ChartTooltipContent />} />
-                    <Legend />
-                    <Line type="monotone" dataKey="avg" name="Average Duration" stroke="#10b981" />
-                    <Line type="monotone" dataKey="max" name="Maximum Duration" stroke="#f59e0b" />
-                  </LineChart>
-                </ChartContainer>
+              <div className="h-96">
+                <ResponsiveContainer width="100%" height="100%">
+                  <ChartContainer config={chartConfig}>
+                    <LineChart data={callDurationData} margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>
+                      <CartesianGrid strokeDasharray="3 3" />
+                      <XAxis dataKey="name" />
+                      <YAxis />
+                      <ChartTooltip content={<ChartTooltipContent />} />
+                      <Legend />
+                      <Line type="monotone" dataKey="avg" name="Average Duration" stroke="#10b981" />
+                      <Line type="monotone" dataKey="max" name="Maximum Duration" stroke="#f59e0b" />
+                    </LineChart>
+                  </ChartContainer>
+                </ResponsiveContainer>
               </div>
             </TabsContent>
             
-            <TabsContent value="agent-performance">
+            <TabsContent value="agent-performance" className="mt-0">
               <h3 className="font-semibold mb-4">Top Agent Performance</h3>
-              <div className="h-80">
-                <ChartContainer config={chartConfig}>
-                  <BarChart data={agentPerformanceData}>
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="name" />
-                    <YAxis yAxisId="left" />
-                    <YAxis yAxisId="right" orientation="right" domain={[0, 5]} />
-                    <ChartTooltip content={<ChartTooltipContent />} />
-                    <Legend />
-                    <Bar yAxisId="left" dataKey="calls" name="Calls Handled" fill="#3b82f6" radius={[4, 4, 0, 0]} />
-                    <Bar yAxisId="left" dataKey="resolution" name="Resolution Rate (%)" fill="#8b5cf6" radius={[4, 4, 0, 0]} />
-                    <Bar yAxisId="right" dataKey="satisfaction" name="Satisfaction Score" fill="#ef4444" radius={[4, 4, 0, 0]} />
-                  </BarChart>
-                </ChartContainer>
+              <div className="h-96">
+                <ResponsiveContainer width="100%" height="100%">
+                  <ChartContainer config={chartConfig}>
+                    <BarChart data={agentPerformanceData} margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>
+                      <CartesianGrid strokeDasharray="3 3" />
+                      <XAxis dataKey="name" />
+                      <YAxis yAxisId="left" />
+                      <YAxis yAxisId="right" orientation="right" domain={[0, 5]} />
+                      <ChartTooltip content={<ChartTooltipContent />} />
+                      <Legend />
+                      <Bar yAxisId="left" dataKey="calls" name="Calls Handled" fill="#3b82f6" radius={[4, 4, 0, 0]} />
+                      <Bar yAxisId="left" dataKey="resolution" name="Resolution Rate (%)" fill="#8b5cf6" radius={[4, 4, 0, 0]} />
+                      <Bar yAxisId="right" dataKey="satisfaction" name="Satisfaction Score" fill="#ef4444" radius={[4, 4, 0, 0]} />
+                    </BarChart>
+                  </ChartContainer>
+                </ResponsiveContainer>
               </div>
             </TabsContent>
           </div>
